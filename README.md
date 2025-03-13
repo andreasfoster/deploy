@@ -37,7 +37,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Install Active Directory</h2>
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Login in into your DC-1 go to ther server manager, after go to add roles and features at the top and continue on until you get to server roles. Once you're there select (Active Direction Domain Services) and continue on and install. Go back to server manager, click the flag at the top and select promote this server to a domain in blue text. Click add new forest and type in (mydomain.com), Create a password and then install. After its installed resign in with mydomain.com\(yourusername). 
 </p>
 <br />
 
@@ -46,7 +46,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </p>
 <p>
 
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+
