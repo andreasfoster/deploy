@@ -91,17 +91,37 @@ Log out of DC-1 and resign in with your new bot employee info that you just crea
 <h2>Setup remote desktop for non-admin users on client-1</h2>
 
 <p>
-Log out of DC-1 and resign in with your new bot employee info that you just created and then sign in to client-1 with your original azure username/pw. When youre signed search about computer in the pcs searchbox and click rename this PC (advanced) in the top right corner of the page. select change and switch the member of from workgroup to domain and then type in mydomain.com and then sign in with (mydomain.com\(bot username u created)/pw. Now go back to DC-1s active directory users and computers, explan mydomain.com and verify if client-1 is in the computers folder. Create a new organizational unit called (_CLIENTS) and drag the client-1 from computers folder into it.
+Log into client-1 as your bot employee and go to remote desktop in settings, after click the last link selecct users that can remotely access this PC and type domain users.  
 </p>
 <br />
 
 <p>
 
-  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-53-28.png)
-  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-53-53.png)
-  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-55-16.png)
-  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-57-32.png)
-  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-59-59.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/2ff87c9d8d19bbbd56afaf5853d9d065477569b3/Screenshot%202025-03-13%2000-03-53.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/2ff87c9d8d19bbbd56afaf5853d9d065477569b3/Screenshot%202025-03-13%2000-06-00.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/2ff87c9d8d19bbbd56afaf5853d9d065477569b3/Screenshot%202025-03-13%2000-06-43.png)
+  
+</p>
+<p>
+
+
+<h2> Create a bunch of additional users and attempt to log into client-1 with one of the users</h2>
+
+  (https://github.com/andreasfoster/deploy/blob/46b7668446e9f67a90865774aa145b39d20c4430/Generate-Names-Create-Users.ps1) 
+
+<p>
+Log into DC-1 as your bot employee and open up powershell ise as admin before running by right clicking and pressing run as administrator. open new file and copy and paste the script at the top into it. to run the script press the green start icon and powershell will begin to create the users. While powershell is creating the users you can go to active directory users and computers and look at the accounts span in the _employees ou. after choose a random user and attempt to sign into client-1 with it. for example the random user i chose was mydomain.com\cili.daje and the password for everysingle user created from that powershell script is Password1. 
+</p>
+<br />
+
+
+<p>
+
+  ![image alt](https://github.com/andreasfoster/deploy/blob/f3dcfa81e4029bbdf28f89d8bca15fb012fc9a14/Screenshot%202025-03-13%2000-13-07.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/f3dcfa81e4029bbdf28f89d8bca15fb012fc9a14/Screenshot%202025-03-13%2000-13-18.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/f3dcfa81e4029bbdf28f89d8bca15fb012fc9a14/Screenshot%202025-03-13%2000-14-37.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/f3dcfa81e4029bbdf28f89d8bca15fb012fc9a14/Screenshot%202025-03-13%2000-16-55.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/f3dcfa81e4029bbdf28f89d8bca15fb012fc9a14/Screenshot%202025-03-13%2000-17-53.png)
 
 </p>
 <p>
