@@ -53,7 +53,7 @@ Login in into your DC-1 go to ther server manager, after go to add roles and fea
 <h2>Create a Domain Admin user within the domain</h2>
 
 <p>
-Login in into your DC-1 again but with mydomain.com\(yourusername_). Open Active Directory Users and Computers adnd create 2 organizational units named "_EMPLOYEES" and "_ADMINS". right click the mydomain.com, go to new adn the click organizational unit and make sure to put the underscore before the word. Next were going to create a Bot User in the admins folder so later on to test DC-1. Go to the admins folder right click the folder itsself or the side and select new and then user. After create the person but remember to take down the username most importantly because we will use this later on. To give your bot admin rights go to the admins folder you just credited it in and right click. go to properties, member of, add and then type domain admins. It might ask you to sign in after you press ok so sign in using the mydomain.com\(theusernameyoucreditedforthebot) and the password or just the orginal sign in info from azure with mydomain.com\. 
+Login in into your DC-1 again but with mydomain.com\(yourusername_). Open Active Directory Users and Computers adnd create 2 organizational units named "_EMPLOYEES" and "_ADMINS". right click the mydomain.com, go to new adn the click organizational unit and make sure to put the underscore before the word. Next were going to create a Bot User in the admins folder so later on to test DC-1. Go to the admins folder right click the folder itsself or the side and select new and then user. After create the person but remember to take down the username most importantly because we will use this later on. To give your bot admin rights go to the admins folder you just created it in and right click. go to properties, member of, add and then type domain admins. It might ask you to sign in after you press ok so sign in using the mydomain.com\(theusernameyoucreditedforthebot) and the password or just the orginal sign in info from azure with mydomain.com\. 
 </p>
 <br />
 
@@ -72,16 +72,36 @@ Login in into your DC-1 again but with mydomain.com\(yourusername_). Open Active
 <h2>Join Client-1 to your domain (mydomain.com)</h2>
 
 <p>
-Login in into your DC-1 go to ther server manager, after go to add roles and features at the top and continue on until you get to server roles. Once you're there select (Active Direction Domain Services) and continue on and install. Go back to server manager, click the flag at the top and select promote this server to a domain in blue text. Click add new forest and type in (mydomain.com), Create a password and then install. After its installed resign in with mydomain.com\(yourusername). 
+Log out of DC-1 and resign in with your new bot employee info that you just created and then sign in to client-1 with your original azure username/pw. When youre signed search about computer in the pcs searchbox and click rename this PC (advanced) in the top right corner of the page. select change and switch the member of from workgroup to domain and then type in mydomain.com and then sign in with (mydomain.com\(bot username u created)/pw. Now go back to DC-1s active directory users and computers, explan mydomain.com and verify if client-1 is in the computers folder. Create a new organizational unit called (_CLIENTS) and drag the client-1 from computers folder into it.
 </p>
 <br />
 
 <p>
 
-  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2022-52-24.png) 
-  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2022-52-24.png)
-  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2023-21-20.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-53-28.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-53-53.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-55-16.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-57-32.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-59-59.png)
 
 </p>
 <p>
 
+
+<h2>Setup remote desktop for non-admin users on client-1</h2>
+
+<p>
+Log out of DC-1 and resign in with your new bot employee info that you just created and then sign in to client-1 with your original azure username/pw. When youre signed search about computer in the pcs searchbox and click rename this PC (advanced) in the top right corner of the page. select change and switch the member of from workgroup to domain and then type in mydomain.com and then sign in with (mydomain.com\(bot username u created)/pw. Now go back to DC-1s active directory users and computers, explan mydomain.com and verify if client-1 is in the computers folder. Create a new organizational unit called (_CLIENTS) and drag the client-1 from computers folder into it.
+</p>
+<br />
+
+<p>
+
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-53-28.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-53-53.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-55-16.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-57-32.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/ad11d78701a0cb0d05661abd148efd04be5d6159/Screenshot%202025-03-12%2023-59-59.png)
+
+</p>
+<p>
