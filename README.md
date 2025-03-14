@@ -42,8 +42,46 @@ Login in into your DC-1 go to ther server manager, after go to add roles and fea
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2022-52-24.png) 
+  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2022-52-24.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2023-21-20.png)
+
 </p>
 <p>
 
+<h2>Create a Domain Admin user within the domain</h2>
+
+<p>
+Login in into your DC-1 again but with mydomain.com\(yourusername_). Open Active Directory Users and Computers adnd create 2 organizational units named "_EMPLOYEES" and "_ADMINS". right click the mydomain.com, go to new adn the click organizational unit and make sure to put the underscore before the word. Next were going to create a Bot User in the admins folder so later on to test DC-1. Go to the admins folder right click the folder itsself or the side and select new and then user. After create the person but remember to take down the username most importantly because we will use this later on. To give your bot admin rights go to the admins folder you just credited it in and right click. go to properties, member of, add and then type domain admins. It might ask you to sign in after you press ok so sign in using the mydomain.com\(theusernameyoucreditedforthebot) and the password or just the orginal sign in info from azure with mydomain.com\. 
+</p>
+<br />
+
+<p>
+
+  ![image alt](https://github.com/andreasfoster/deploy/blob/0c2bd5ed800c41610b7725edfdf78276211877ef/Screenshot%202025-03-12%2023-41-11.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/0c2bd5ed800c41610b7725edfdf78276211877ef/Screenshot%202025-03-12%2023-43-55.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/0c2bd5ed800c41610b7725edfdf78276211877ef/Screenshot%202025-03-12%2023-45-37.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/0c2bd5ed800c41610b7725edfdf78276211877ef/Screenshot%202025-03-12%2023-46-25.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/0c2bd5ed800c41610b7725edfdf78276211877ef/Screenshot%202025-03-12%2023-48-46.png)
+</p>
+<p>
+
+
+
+<h2>Join Client-1 to your domain (mydomain.com)</h2>
+
+<p>
+Login in into your DC-1 go to ther server manager, after go to add roles and features at the top and continue on until you get to server roles. Once you're there select (Active Direction Domain Services) and continue on and install. Go back to server manager, click the flag at the top and select promote this server to a domain in blue text. Click add new forest and type in (mydomain.com), Create a password and then install. After its installed resign in with mydomain.com\(yourusername). 
+</p>
+<br />
+
+<p>
+
+  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2022-52-24.png) 
+  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2022-52-24.png)
+  ![image alt](https://github.com/andreasfoster/deploy/blob/dfe3e3ea5d4a76f19decf86b25ef9f4c54ee92c0/Screenshot%202025-03-12%2023-21-20.png)
+
+</p>
+<p>
 
